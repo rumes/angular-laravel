@@ -1,0 +1,22 @@
+<form class="example-form" [formGroup]="loginForm">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="User Name" [formControl]="username" >
+    <mat-error *ngIf="username.error.email && !username.error.required">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="username.error.required">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" [formControl]="password" >
+    <mat-error *ngIf="password.error.minLength && !password.error.required">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="password.error.required">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+</form>
